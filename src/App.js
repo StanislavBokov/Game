@@ -1,11 +1,10 @@
-
-
 import Field from "./components/field";
 import MainButton from "./components/button";
 import NumberOfTicket from "./components/numberOfTicket";
 import React,{useState} from "react";
 import Modal from "./components/modal";
-const firstFieldNumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+
+const firstFieldNumbers = new Array(19).fill(null).map((_,idx) => idx+1)
 const secondFieldNumbers = [1,2]
 
 const copyFirstArray1 = [...firstFieldNumbers]
@@ -18,6 +17,7 @@ function App() {
   const [visibleModal,setVisibleModal] = useState(false)
 
   return (
+  <div className='body'>  
     <div className='container'>
       <NumberOfTicket
           setSelectedNumbers={setSelectedNumbers}
@@ -47,8 +47,9 @@ function App() {
           setCountMatch={setCountMatch}
           setVisibleModal={setVisibleModal}
       />
-      {visibleModal && <Modal countMatch={countMatch}/>} 
+      {visibleModal && <Modal countMatch={countMatch} setVisibleModal={setVisibleModal}/>} 
     </div>
+  </div>  
   );
 }
 

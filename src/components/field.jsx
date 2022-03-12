@@ -1,7 +1,11 @@
 import React from "react";
 
 const Field = ({array,num,selectedNumbers,setSelectedNumbers}) => {
-  
+  const items = document.querySelectorAll('.item')
+  items.forEach((el,i) => {
+   return el.style = `right: ${i % 7}px;bottom: ${Math.floor(i / 7)}px`;
+  })
+
   const handleClick = (i,arr) => {
 
     if(arr.includes(i)) {
@@ -13,14 +17,15 @@ const Field = ({array,num,selectedNumbers,setSelectedNumbers}) => {
     }
 }
     return ( <>
+
     <div className='info'>
           <div >
             Поле {num > 1 ? 1 : 2}
           </div>
           <div>
             {num === 8
-            ? `Отметье ${num} чисeл`
-            : `Отметье ${num} число`}
+            ? `Отметьте ${num} чисeл`
+            : `Отметьте ${num} число`}
           </div>
     </div>
     <div className='contaner-item'>

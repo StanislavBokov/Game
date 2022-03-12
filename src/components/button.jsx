@@ -6,7 +6,6 @@ const MainButton = ({selectedNumbers,selectedNumbers2, array,array2,setCountMatc
     const handleSubmit = () => {
         const generationFirstArray = getGenerationArray(array,8)
         const generationSecondArray = getGenerationArray(array2,1)
-       
         let obj = {}
         let obj2 = {}
         let result = []
