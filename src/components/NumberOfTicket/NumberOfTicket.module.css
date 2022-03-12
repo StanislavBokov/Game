@@ -1,0 +1,20 @@
+.ticketNum {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.stick {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../public/magic-wand.png');
+    background-size: 20px 20px;
+    transition: all 0.1s ease-in;
+    padding-right: 5px;
+    background-repeat: no-repeat;
+}
+.stick:hover {
+    transform: scale(1.1);
+}

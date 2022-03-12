@@ -1,11 +1,13 @@
-import Field from './components/field'
-import MainButton from './components/button'
-import NumberOfTicket from './components/numberOfTicket'
+import Field from '../components/Field/Field'
+import Button from '../components/Button/Button'
+import NumberOfTicket from '../components/NumberOfTicket/NumberOfTicket'
 import React, { useState } from 'react'
-import Modal from './components/modal'
+import Modal from '../components/Modal/Modal'
+import { createArray } from '../utils'
+import classes from './App.module.css'
 
-const firstFieldNumbers = new Array(19).fill(null).map((_, idx) => idx + 1)
-const secondFieldNumbers = [1, 2]
+const firstFieldNumbers = createArray(19)
+const secondFieldNumbers = createArray(2)
 
 const copyFirstArray1 = [...firstFieldNumbers]
 const copyFirstArray2 = [...secondFieldNumbers]
@@ -17,8 +19,8 @@ function App() {
     const [visibleModal, setVisibleModal] = useState(false)
 
     return (
-        <div className="body">
-            <div className="container">
+        <div className={classes.body}>
+            <div className={classes.container}>
                 <NumberOfTicket
                     setSelectedNumbers={setSelectedNumbers}
                     setSelectedNumbers2={setSelectedNumbers2}
@@ -28,18 +30,22 @@ function App() {
 
                 <Field
                     array={firstFieldNumbers}
-                    num={8}
+                    defaultText="Отметьте 8 чисел"
+                    defaultText2="Поле 1"
                     selectedNumbers={selectedNumbers}
                     setSelectedNumbers={setSelectedNumbers}
+                    num={8}
                 />
 
                 <Field
                     array={secondFieldNumbers}
-                    num={1}
+                    defaultText="Отметьте 1 число"
+                    defaultText2="Поле 2"
                     selectedNumbers={selectedNumbers2}
                     setSelectedNumbers={setSelectedNumbers2}
+                    num={1}
                 />
-                <MainButton
+                <Button
                     selectedNumbers={selectedNumbers}
                     selectedNumbers2={selectedNumbers2}
                     array={copyFirstArray1}

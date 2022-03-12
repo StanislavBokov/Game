@@ -3,17 +3,19 @@ module.exports = {
         browser: true,
         es2021: true
     },
-    extends: ["plugin:react/recommended", "standard"],
+    extends: ['plugin:react/recommended', 'standard'],
     parserOptions: {
         ecmaFeatures: {
             jsx: true
         },
         ecmaVersion: 13,
-        sourceType: "module"
+        sourceType: 'module'
     },
-    plugins: ["react"],
+    plugins: ['react'],
     rules: {
-        indent: ["error", 4],
-        quotes: ["error", "single"]
+        indent: ['error', 4],
+        quotes: ['error', 'single'],
+        'react/prop-types': 0,
+        'space-before-function-paren': ['error', 'never']
     }
-};
+}

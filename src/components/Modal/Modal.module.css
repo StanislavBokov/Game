@@ -1,0 +1,47 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: up 0.5s;
+}
+.modalContent {
+    background-color: rgb(254, 253, 255);
+    padding: 40px 20px;
+    border-radius: 2%;
+    min-width: 150px;
+    font-size: 16px;
+    box-shadow: 0 0 1px 1px rgb(153, 153, 153);
+}
+.closeBtn {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 5%;
+}
+.opacityDown {
+    animation: down 0.5s;
+}
+
+@keyframes down {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

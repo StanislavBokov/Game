@@ -8,3 +8,6 @@ export const getGenerationArray = (array, num) => {
     }
     return generationArray
 }
+export const createArray = (n) => {
+    return new Array(n).fill(null).map((_, idx) => idx + 1)
+}
