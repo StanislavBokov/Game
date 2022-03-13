@@ -2,11 +2,18 @@ import React, { useState } from 'react'
 import classes from './Modal.module.css'
 import cn from 'classnames'
 
-const Modal = ({ countMatch, setVisibleModal }) => {
+const Modal = ({
+    countMatch,
+    setVisibleModal,
+    setSelectedNumbers,
+    setSelectedNumbers2
+}) => {
     const [click, setClick] = useState(false)
 
     const handleClose = () => {
         setClick(true)
+        setSelectedNumbers([])
+        setSelectedNumbers2([])
         setTimeout(() => {
             setVisibleModal(false)
         }, 500)

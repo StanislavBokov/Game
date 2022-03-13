@@ -57,6 +57,8 @@ function App() {
                     <Modal
                         countMatch={countMatch}
                         setVisibleModal={setVisibleModal}
+                        setSelectedNumbers={setSelectedNumbers}
+                        setSelectedNumbers2={setSelectedNumbers2}
                     />
                 )}
             </div>

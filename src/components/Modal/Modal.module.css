@@ -26,7 +26,7 @@
     border-radius: 5%;
 }
 .opacityDown {
-    animation: down 0.5s;
+    animation: down 0.55s;
 }
 
 @keyframes down {
